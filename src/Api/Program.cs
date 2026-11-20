@@ -31,3 +31,4 @@ app.MapPost("/notes", async (NoteInput input, AppDb db) =>
 });
 
 app.Run();
+public partial class Program { }
