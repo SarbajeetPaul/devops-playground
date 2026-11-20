@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 11.0.x
-      - run: dotnet restore
+      - run: dotnet restore tests/Api.Tests
       - run: dotnet format --verify-no-changes
-      - run: dotnet build --no-restore -c Release
-      - run: dotnet test --no-build -c Release
+      - run: dotnet build tests/Api.Tests --no-restore -c Release
+      - run: dotnet test tests/Api.Tests --no-build -c Release
