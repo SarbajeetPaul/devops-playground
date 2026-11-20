@@ -11,7 +11,7 @@ public class ApiTests(WebApplicationFactory<Program> factory)
     public async Task Health_returns_200()
     {
         var res = await _client.GetAsync("/health");
-        Assert.Equal(HttpStatusCode.BadRequest, res.StatusCode);
+        Assert.Equal(HttpStatusCode.OK, res.StatusCode);
     }
 
     [Fact]
